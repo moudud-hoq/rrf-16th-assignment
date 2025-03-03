@@ -9,16 +9,24 @@
         integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <script src="/assets/js/jQuery.min.js"></script>
+    <!-- jQuery CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
     <!--Slick Carousel CDN Link it must be under jQuery.min.js file-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"
         integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <link rel="stylesheet" href="/assets/css/16.css">
+    <link rel="stylesheet" href="/assets/16thassignment.css">
+    <link rel="stylesheet" href="/assets/carousel.css">
     <title>16th Assignment</title>
 </head>
 
 <body>
+
+
     <section style="background-color: #FFF9F3;" class="wheat-bg">
         <header class="header">
             <div class="container">
@@ -113,41 +121,59 @@
                 </a>
             </div>
 
-          <div class="featured-on-area">
-                          <p class="featured-on-title">Featured On:</p>
+            <div class="carousel-container">
+                <h4 class="featured-on-title">Featured On</h2>
+                <script>
+                    jQuery(document).ready(function () {
+                        $('.logo-carousel').slick({
+                            centerMode: true,
+                            centerPadding: '10px',
+                            slidesToShow: 4,
+                            arrows: false,
+                            dots: true,
+                            autoplay: true,
+                            autoplaySpeed: 1000,
+                        });
 
-                <div class="gallery">
-                <a href="https://files.dorik.com/635bcad9b8a74e0091632998/usa-today-new-1-1-1-1isQue.svg">
-                    <img src="https://files.dorik.com/635bcad9b8a74e0091632998/usa-today-new-1-1-1-1isQue.svg"
-                        alt="USA Today">
-                </a>
-                <a
-                    href="https://cdn.cmsfly.com/635bcad9b8a74e0091632998/wlz8cbkhsk7tdjvq27vsel7whrf0sf3rcaoslpdq-_8Kimv.png">
-                    <img src="https://cdn.cmsfly.com/635bcad9b8a74e0091632998/wlz8cbkhsk7tdjvq27vsel7whrf0sf3rcaoslpdq-_8Kimv.png"
-                        alt="CNN">
-                </a>
-                <a href="https://files.dorik.com/635bcad9b8a74e0091632998/pcmag-wggP-y.svg">
-                    <img src="https://files.dorik.com/635bcad9b8a74e0091632998/pcmag-wggP-y.svg" alt="PC Mag">
-                </a>
-                <a href="https://files.dorik.com/635bcad9b8a74e0091632998/hubspot_logo-I6cXPe.svg">
-                    <img src="https://files.dorik.com/635bcad9b8a74e0091632998/hubspot_logo-I6cXPe.svg" alt="HubSpot">
-                </a>
-                <a href="https://files.dorik.com/635bcad9b8a74e0091632998/usn-logo-large-b5R6h2.svg">
-                    <img src="https://files.dorik.com/635bcad9b8a74e0091632998/usn-logo-large-b5R6h2.svg" alt="US News">
-                </a>
+                    });
+                </script>
+
+                <div class="logo-carousel">
+                    <div class="single-logo-carousel-wrapper">
+                        <div class="single-logo-carousel">
+                            <img width="200px" height="auto" margin="0 auto"
+                                src="https://files.dorik.com/635bcad9b8a74e0091632998/usa-today-new-1-1-1-1isQue.svg"
+                                alt="">
+                        </div>
+                    </div>
+                    <div class="single-logo-carousel-wrapper">
+                        <div class="single-logo-carousel">
+                            <img width="100px" height="auto"
+                                src="https://cdn.cmsfly.com/635bcad9b8a74e0091632998/wlz8cbkhsk7tdjvq27vsel7whrf0sf3rcaoslpdq-_8Kimv.png"
+                                alt="">
+                        </div>
+                    </div>
+                    <div class="single-logo-carousel-wrapper">
+                        <div class="single-logo-carousel">
+                            <img width="50px" height="auto"
+                                src="https://files.dorik.com/635bcad9b8a74e0091632998/pcmag-wggP-y.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="single-logo-carousel-wrapper">
+                        <div class="single-logo-carousel">
+                            <img width="200px" height="auto"
+                                src="https://files.dorik.com/635bcad9b8a74e0091632998/hubspot_logo-I6cXPe.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="single-logo-carousel-wrapper">
+                        <div class="single-logo-carousel">
+                            <img width="200px" height="auto"
+                                src="https://files.dorik.com/635bcad9b8a74e0091632998/usn-logo-large-b5R6h2.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+
             </div>
-          </div>
-
-<!-- 
-            <div class="featured-on">
-                <p>Featured On:</p>
-                <img src="https://files.dorik.com/635bcad9b8a74e0091632998/usa-today-new-1-1-1-1isQue.svg" alt="">
-                <img src="https://cdn.cmsfly.com/635bcad9b8a74e0091632998/wlz8cbkhsk7tdjvq27vsel7whrf0sf3rcaoslpdq-_8Kimv.png"
-                    alt="">
-                <img src="https://files.dorik.com/635bcad9b8a74e0091632998/pcmag-wggP-y.svg" alt="">
-                <img src="https://files.dorik.com/635bcad9b8a74e0091632998/hubspot_logo-I6cXPe.svg" alt="">
-                <img src="https://files.dorik.com/635bcad9b8a74e0091632998/usn-logo-large-b5R6h2.svg" alt="">
-            </div> -->
 
             <div class="hero-video">
                 <div class="video-border-wrapper">

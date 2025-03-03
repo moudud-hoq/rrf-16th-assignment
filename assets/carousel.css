@@ -1,0 +1,164 @@
+/*Project CSS*/
+/* Font imports */
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.carousel-container {
+    max-width: 800px;
+    margin: 50px auto;
+
+}
+
+a {
+    color: #0f1cf6;
+    text-decoration: none;
+}
+
+body {
+    line-height: 1.5;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0 0 15px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+
+
+.single-slide-item {
+    background-image: url('https://t3.ftcdn.net/jpg/07/54/40/16/240_F_754401607_hThyjkHKFkFsXSuhlMeOwNjYqqedqxFr.jpg');
+    background-size: cover;
+    height: 300px;
+    background-position: center;
+    background-color: black;
+    position: relative;
+    z-index: 1;
+    padding: 30px;
+
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.single-slide-item::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+    opacity: .8;
+}
+
+.btn {
+    padding: 10px 20px;
+    background-color: #0f1cf6;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    font-weight: 600;
+}
+
+.btn a {
+    color: white;
+}
+
+.btn:hover {
+    background-color: #040c9e;
+    text-decoration: none;
+}
+
+/* SLider Next and Prev button position */
+.prev-button {
+    left: -120px;
+}
+
+.next-button {
+    right: -120px;
+}
+
+
+.prev-button, .next-button {
+    background: linear-gradient(45deg, #0f1cf6, #040c9e);
+    border: none;
+    color: #fff;
+    padding: 15px 44px;
+    border-radius: 5px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+
+
+    position: absolute;
+    top: 50%;
+    z-index: 1;
+}
+
+.prev-button:hover, .next-button:hover {
+    background: #fff;
+    color: #000;
+    border: 2px solid #000;
+    cursor: pointer;
+
+}
+
+/*Working for dots*/
+ul.slick-dots button {
+    display: none;
+}
+
+ul.slick-dots li {
+    height: 10px;
+    width: 10px;
+    background-color: blue;
+    border-radius: 50px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+ul.slick-dots {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ul.slick-dots li.slick-active {
+    background-color: red;
+}
+
+.logo-carousel ul.slick-dots li {
+    background-color: rgb(0, 109, 0);
+}
+
+.logo-carousel ul.slick-dots li.slick-active {
+    background-color: rgb(121, 0, 0);
+}
+
+.single-logo-carousel{
+    padding: 0 20px;
+}
+
+.slick-list li{
+    margin: 0 -10px;
+}
