@@ -1,4 +1,3 @@
-
 /*Project CSS*/
 /* Font imports */
 @import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
@@ -55,7 +54,7 @@ video {
     top: 0;
     left: 0;
     right: 0;
-    z-index: 1;
+    z-index: 999;
     width: 100%;
     padding: 20px 100px 15px;
     border-bottom: 1px solid rgb(211, 211, 211);
@@ -63,7 +62,7 @@ video {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .logo {
@@ -1434,6 +1433,110 @@ img.mfp-img {
     .mfp-container {
         padding-left: 6px;
         padding-right: 6px
+    }
+}
+
+/* Hamburger Menu */
+.hamburger-menu {
+    display: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1000;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: #292281;
+    margin: 5px 0;
+    transition: all 0.3s ease;
+}
+
+/* Mobile Menu */
+.mobile-menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100vh;
+    background-color: #FFF9F3;
+    padding-top: 80px;
+    transition: left 0.3s ease;
+    z-index: 998;
+}
+
+.mobile-menu.active {
+    left: 0;
+}
+
+.mobile-menu .menu-ul {
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+}
+
+.mobile-menu li {
+    margin: 15px 0;
+}
+
+.mobile-auth {
+    display: none;
+    margin-top: 20px;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Hamburger Animation */
+.hamburger-menu.active .bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.hamburger-menu.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-menu.active .bar:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* Media Queries */
+@media screen and (max-width: 1024px) {
+    .header-wrapper {
+        padding: 20px 50px 15px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .header-wrapper {
+        padding: 15px 30px;
+    }
+
+    .hamburger-menu {
+        display: block;
+    }
+
+    .desktop-menu,
+    .desktop-auth {
+        display: none;
+    }
+
+    .mobile-menu {
+        display: block;
+    }
+
+    .mobile-auth {
+        display: flex;
+    }
+
+    .logo {
+        width: auto;
+    }
+
+    .mobile-menu .signup {
+        width: 200px;
+        text-align: center;
     }
 }
 

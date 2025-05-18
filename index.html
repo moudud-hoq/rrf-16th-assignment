@@ -36,8 +36,33 @@
                             alt="" width="80px" height="auto">
                     </div>
 
-                    <!-- Menu -->
-                    <div class="menu">
+                    <!-- Hamburger Menu Button -->
+                    <div class="hamburger-menu">
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                    </div>
+
+                    <!-- Mobile Menu -->
+                    <div class="mobile-menu">
+                        <nav>
+                            <ul class="menu-ul">
+                                <li><a href="#" class="li-feature">Feature</a></li>
+                                <li><a href="#">Home</a></li>
+                                <li><a href="#">About</a></li>
+                                <li><a href="#">Contact</a></li>
+                                <li><a href="#">Others</a></li>
+                                <li><a href="#">Menu</a></li>
+                                <li class="mobile-auth">
+                                    <a href="#" class="login" id="login-btn">Login</a>
+                                    <a href="#" class="signup" id="signup-btn">Sign Up</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+
+                    <!-- Desktop Menu -->
+                    <div class="menu desktop-menu">
                         <nav>
                             <ul class="menu-ul">
                                 <li><a href="#" class="li-feature">Feature</a></li>
@@ -50,7 +75,7 @@
                         </nav>
                     </div>
 
-                    <div class="log-sign-btn">
+                    <div class="log-sign-btn desktop-auth">
                         <a href="#" class="login" id="login-btn">Login</a>
                         <a href="#" class="signup" id="signup-btn">Sign Up</a>
                     </div>
@@ -1235,7 +1260,7 @@
         document.addEventListener('DOMContentLoaded', function () {
             const playButton = document.querySelector('.play-button');
             const video = document.querySelector('.video-border-wrapper video');
-
+            
             if (playButton && video) {
                 playButton.addEventListener('click', function () {
                     video.play();
@@ -1250,6 +1275,36 @@
                     playButton.style.display = 'none';
                 });
             }
+
+            // Hamburger Menu functionality
+            const hamburger = document.querySelector('.hamburger-menu');
+            const mobileMenu = document.querySelector('.mobile-menu');
+            const body = document.body;
+
+            hamburger.addEventListener('click', function() {
+                hamburger.classList.toggle('active');
+                mobileMenu.classList.toggle('active');
+                body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : 'auto';
+            });
+
+            // Close mobile menu when clicking a link
+            const mobileLinks = document.querySelectorAll('.mobile-menu a');
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    hamburger.classList.remove('active');
+                    mobileMenu.classList.remove('active');
+                    body.style.overflow = 'auto';
+                });
+            });
+
+            // Close mobile menu on window resize if it's open
+            window.addEventListener('resize', () => {
+                if (window.innerWidth > 768 && mobileMenu.classList.contains('active')) {
+                    hamburger.classList.remove('active');
+                    mobileMenu.classList.remove('active');
+                    body.style.overflow = 'auto';
+                }
+            });
         });
     </script>
 </body>
