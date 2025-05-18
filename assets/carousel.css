@@ -14,12 +14,6 @@
 
 }
 
-.carousel-container2 {
-    max-width: 1000px;
-    margin: 50px auto;
-
-}
-
 a {
     color: #0f1cf6;
     text-decoration: none;
@@ -38,8 +32,6 @@ img {
     max-width: 100%;
     height: auto;
 }
-
-
 
 
 .single-slide-item {
@@ -161,9 +153,6 @@ ul.slick-dots li.slick-active {
     background-color: rgb(121, 0, 0);
 }
 
-.single-logo-carousel{
-    padding: 0 20px;
-}
 
 .slick-list li{
     margin: 0 -10px;

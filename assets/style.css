@@ -525,12 +525,14 @@ video {
     font-weight: 500;
 }
 
-.signup:hover,
+/* .signup:hover,
 .login:hover {
     text-decoration: underline;
-}
+} */
 
 .signup {
+    background-color: #0056b3;
+    color: white;
     border: 1px solid blue;
     padding: 7px 15px;
     border-radius: 5px;
@@ -576,6 +578,7 @@ video {
     text-align: center;
     color: #333;
     font-weight: 600;
+
 }
 
 .features {

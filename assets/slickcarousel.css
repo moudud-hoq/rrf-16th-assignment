@@ -1,0 +1,57 @@
+.slick-track {
+    border: 10px solid red;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.slick-slider {
+    border: 1px solid blue;
+    padding: 5px;
+
+}
+
+.slick-slide {
+    border: 1px solid green;
+    padding: 5px;
+}
+
+.slick-slide img {
+    border: 1px solid black;
+    max-width: 100px;
+    max-height: 100px;
+}
+
+.carouselCounterWrapper {
+    border: 5px solid rgb(251, 255, 1);
+    padding: 5px;
+
+}
+
+.logo-carousel {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.single-logo-carousel {
+  aspect-ratio: 3 / 1; /* maintains width:height ratio */
+  width: 10vw; /* responsive, adjusts with screen */
+  max-width: 150px; /* prevents too large logos */
+  min-width: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.single-logo-carousel img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* scales image nicely without distortion */
+}
+
