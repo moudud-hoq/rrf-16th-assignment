@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="./assets/style.css">
     <link rel="stylesheet" href="assets/carousel.css">
     <link rel="stylesheet" href="assets/slickcarousel.css">
-    <title>16th Assignment</title>
+    <title>Dorik Clone</title>
 </head>
 
 <body>
@@ -183,8 +183,18 @@
                 });
             </script>
 
+            <!-- Video Section-->
             <div class="hero-video">
                 <div class="video-border-wrapper">
+                    <div class="play-button">
+                        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="play"
+                            class="svg-inline--fa fa-play fa-fw icon " role="img" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 384 512" data-testid="icon-test">
+                            <path fill="currentColor"
+                                d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z">
+                            </path>
+                        </svg>
+                    </div>
                     <video
                         poster="https://cdn.cmsfly.com/635bcad9b8a74e0091632998/images/41829376516705076200196503870756626797345056n-0OU1W.jpeg"
                         src="https://files.dorik.com/635bcad9b8a74e0091632998/videos/Dorik-AI-Intro-720p-vG0YQ.mp4"
@@ -586,7 +596,7 @@
                                         stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                                         class="feather feather-check" color="undefined">
                                         <polyline points="20 6 9 17 4 12"></polyline>
-                                    </svg> Add your own brand’s logo and colors
+                                    </svg> Add your own brand's logo and colors
                                 </li>
                                 <li class="tr-p tr-li"><svg xmlns="http://www.w3.org/2000/svg" width="18px"
                                         height="18px" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -945,7 +955,7 @@
                     </svg>
                     <p class="trb-h">Unlimited Storage & Bandwidth
                     </p>
-                    <p class="trb-p">Don’t worry about your site’s storage and bandwidth because Dorik provides you with
+                    <p class="trb-p">Don't worry about your site's storage and bandwidth because Dorik provides you with
                         all the site storage you need.
                     </p>
                 </div>
@@ -1220,6 +1230,28 @@
         </div>
     </footer>
 
+    <script>
+        // Play button functionality
+        document.addEventListener('DOMContentLoaded', function () {
+            const playButton = document.querySelector('.play-button');
+            const video = document.querySelector('.video-border-wrapper video');
+
+            if (playButton && video) {
+                playButton.addEventListener('click', function () {
+                    video.play();
+                    playButton.style.display = 'none';
+                });
+
+                video.addEventListener('pause', function () {
+                    playButton.style.display = 'flex';
+                });
+
+                video.addEventListener('play', function () {
+                    playButton.style.display = 'none';
+                });
+            }
+        });
+    </script>
 </body>
 
 </html>

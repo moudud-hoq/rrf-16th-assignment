@@ -688,11 +688,6 @@ video {
     gap: 20px;
 }
 
-.featured-on img {
-    width: 100px;
-    height: 35px;
-}
-
 /* Gallary System with magnific Popup */
 .gallery {
     display: flex;
@@ -745,9 +740,9 @@ video {
     background-color: #d3d3d3;
     padding: 20px;
     border-radius: 25px;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
     width: 100%;
     overflow: hidden;
+    position: relative;
 }
 
 .hero-video video {
@@ -755,6 +750,43 @@ video {
     display: block;
     border-radius: 15px;
     object-fit: cover;
+}
+
+.play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 80px;
+    background-color: #8c3bfc;
+    border-radius: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 10;
+    transition: all 0.3s ease;
+}
+
+.play-button svg {
+    width: 30px;
+    height: 30px;
+    fill: #3A30BA;
+    margin-left: 5px;
+}
+
+.play-button:hover {
+    background-color: #27A6FE;
+}
+
+.play-button:hover svg {
+    fill: white;
+}
+
+/* Hide play button when video is playing */
+video[controls]:playing ~ .play-button {
+    display: none;
 }
 
 
